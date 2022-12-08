@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Error from "./Error";
+
 const Formulario = ({pacientes ,setPacientes}) => {
   const [name, setName] = useState("");
   const [propietario, setPropietario] = useState("");
@@ -8,6 +9,13 @@ const Formulario = ({pacientes ,setPacientes}) => {
   const [sintomas, setSintomas] = useState("");
 
   const [error, setError] = useState(false);
+
+  const generarId = () => {
+    const random = Math.random().toString(36).substring(2);
+    const fecha = Date.now().toString(36)
+
+    return fecha + random
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,10 +31,11 @@ const Formulario = ({pacientes ,setPacientes}) => {
           propietario,
           email, 
           fecha, 
-          sintomas
+          sintomas, 
+          id: generarId()
         }
 
-        setPacientes(...pacientes, objectoPaciente)
+        setPacientes([...pacientes, objectoPaciente])
 
         setName('')
         setPropietario('')
@@ -84,7 +93,6 @@ const Formulario = ({pacientes ,setPacientes}) => {
             placeholder="Nombre del propietario"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounde-md"
             value={propietario}
-            required
             onChange={ (e) => setPropietario(e.target.value)}
           />
         </div>

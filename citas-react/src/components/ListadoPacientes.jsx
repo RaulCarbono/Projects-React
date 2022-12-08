@@ -1,6 +1,8 @@
 import React from 'react'
 import Pacientes from './Pacientes'
-const ListadoPacientes = () => {
+ 
+const ListadoPacientes = ({pacientes}) => {
+  
   return (
    <div className='w-1/2 lg:w-3/5 h-screen overflow-y-scroll'>
 
@@ -10,13 +12,11 @@ const ListadoPacientes = () => {
             Administra tus {''}
             <span className='text-indigo-600 font-bold'> Pacientes y Citas </span>
         </p>
-        <Pacientes />
-        <Pacientes />
-        <Pacientes />
-        <Pacientes />
-        <Pacientes />
-        <Pacientes />
-
+      
+         {pacientes.map(item => (
+          <Pacientes paciente={item}/>
+         ))} 
+      
    </div>
   )
 }
