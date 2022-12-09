@@ -1,7 +1,9 @@
-import React from "react";
+
 import Pacientes from "./Pacientes";
 
-const ListadoPacientes = ({ pacientes }) => {
+const ListadoPacientes = ({ pacientes,setPaciente, eliminarPaciente }) => {
+
+
   return (
     <div className="w-1/2 lg:w-3/5 h-screen overflow-y-scroll">
       {pacientes && pacientes.length ? (
@@ -19,14 +21,17 @@ const ListadoPacientes = ({ pacientes }) => {
           </p>
 
           {pacientes.map((item) => (
-            <Pacientes paciente={item} key={item.id} />
+            <Pacientes 
+            paciente={item} 
+            key={item.id}
+            setPaciente={setPaciente}
+            eliminarPaciente={eliminarPaciente} 
+            />
           ))}
         </>
       ) : (
         <>
-          <h2 className="font-black text-3xl text-center">
-            No hay pacientes{" "}
-          </h2>
+          <h2 className="font-black text-3xl text-center">No hay pacientes </h2>
 
           <p className="text-xl mt-5 mb-10 text-center">
             Comienza agregando Pacientes {""}
