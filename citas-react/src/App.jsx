@@ -18,7 +18,7 @@ function App() {
    },[]);
 
    useEffect(() => {
-    console.log(2)
+    
     localStorage.setItem('pacientes', JSON.stringify(pacientes))
    }, [pacientes])
 
