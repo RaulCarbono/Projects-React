@@ -14,7 +14,7 @@ const ListadoPacientes = ({ pacientes,setPaciente, eliminarPaciente }) => {
 
           <p className="text-xl mt-5 mb-10 text-center">
             Administra tus {""}
-            <span className="text-indigo-600 font-bold">
+            <span className="text-cyan-600 font-bold">
               {" "}
               Pacientes y Citas{" "}
             </span>
@@ -35,7 +35,7 @@ const ListadoPacientes = ({ pacientes,setPaciente, eliminarPaciente }) => {
 
           <p className="text-xl mt-5 mb-10 text-center">
             Comienza agregando Pacientes {""}
-            <span className="text-indigo-600 font-bold">
+            <span className="text-cyan-600 font-bold">
               {" "}
               y aparereceran en este lugar{" "}
             </span>
