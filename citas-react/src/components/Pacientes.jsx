@@ -3,12 +3,13 @@ const Pacientes = ({ paciente, setPaciente, eliminarPaciente }) => {
   const { name, propietario, email, fecha, sintomas, id } = paciente;
 
   const handleEliminar = () => {
+    const respuesta = confirm('¿Deseas eliminar este paciente?')
     eliminarPaciente(id)
   }
 
   return (
-    <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl ">
-      <p className="font-bold mb-3 text-gray-700 uppercase">
+    <div className="mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl ">
+      <p className="font-bold mb-3 text-gray-600 uppercase">
         Nombre : {""}
         <span className="font-normal normal-case">{name}</span>
       </p>

@@ -7,20 +7,19 @@ import ListadoPacientes from "./components/ListadoPacientes"
 function App() {
    const [pacientes, setPacientes] = useState([]); 
    const [paciente, setPaciente] = useState({});
-  
-   useEffect(() => {
-    const obtenerLs = () => {
-      console.log(1)
-      const pacientesLS = JSON.parse(localStorage.getItem("pacientes")) ?? [];
-      setPacientes(pacientesLS)
-      }
-      obtenerLs();
-   },[]);
 
-   useEffect(() => {
-    console.log(2)
-    localStorage.setItem('pacientes', JSON.stringify(pacientes))
-   }, [pacientes])
+    useEffect(() => {
+       const obtenerLS = () => {
+           const pacientesLS = JSON.parse(localStorage.getItem('pacientes')) ?? [];
+           setPacientes(pacientesLS)
+           }
+           obtenerLS();
+         },[]);
+       
+          useEffect(() => {
+           localStorage.setItem('pacientes', JSON.stringify(pacientes))
+          }, [pacientes])
+          
 
    const elminarPaciente =  id => {
     const pacientesActualizados = pacientes.filter(paciente => paciente.id !== id)
@@ -31,7 +30,7 @@ function App() {
     <div className="container mx-auto mt-20">
     <Header />
     
-      <div className="mt-12 flex">
+      <div className="mt-12 md:flex">
         <Formulario 
         pacientes={pacientes}
         setPacientes={setPacientes}
