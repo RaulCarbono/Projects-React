@@ -1,0 +1,52 @@
+.tablelistuser_container {
+  .tablelistUser_content_header {
+    display: grid;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    grid-template-columns: repeat(2, 1fr);
+
+    .__content_header_title {
+      justify-self: flex-start;
+      align-self: center;
+      padding-left: 32px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+      h1 {
+        font-weight: 900;
+        font-size: 24px;
+        margin: 0 0 10px 0;
+        color: black;
+      }
+      span {
+        font-weight: 600;
+        font-size: 16px;
+        color: lightgreen;
+      }
+    }
+    .__content_header_button {
+      justify-self: flex-end;
+      align-self: center;
+      padding-right: 32px;
+
+      button {
+        background-color: lightgreen;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: green;
+        padding: 15px 35px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+
+        i {
+          padding-right: 5px;
+        }
+        &:hover {
+          background-color: rgba($color: green, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}
