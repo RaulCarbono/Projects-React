@@ -1,0 +1,442 @@
+{
+    "data": {
+      "getAllRoles": [
+        {
+          "id": 2,
+          "name": "recepcionista",
+          "components": null
+        },
+        {
+          "id": 3,
+          "name": "tecnico",
+          "components": null
+        },
+        {
+          "id": 4,
+          "name": "aseadora2",
+          "components": null
+        },
+        {
+          "id": 5,
+          "name": "raul",
+          "components": null
+        },
+        {
+          "id": 6,
+          "name": "sebas",
+          "components": null
+        },
+        {
+          "id": 7,
+          "name": "Hola",
+          "components": null
+        },
+        {
+          "id": 16,
+          "name": "Gerente",
+          "components": null
+        },
+        {
+          "id": 17,
+          "name": "Celador",
+          "components": null
+        },
+        {
+          "id": 18,
+          "name": "Luismanuel",
+          "components": null
+        },
+        {
+          "id": 19,
+          "name": "Productor",
+          "components": null
+        },
+        {
+          "id": 20,
+          "name": "vigilante",
+          "components": null
+        },
+        {
+          "id": 21,
+          "name": "Profesor",
+          "components": null
+        },
+        {
+          "id": 22,
+          "name": "Prueba",
+          "components": null
+        },
+        {
+          "id": 23,
+          "name": "Ingeniero",
+          "components": null
+        },
+        {
+          "id": 24,
+          "name": "",
+          "components": null
+        },
+        {
+          "id": 25,
+          "name": "Hola ",
+          "components": null
+        },
+        {
+          "id": 26,
+          "name": "Gerente de controladores",
+          "components": null
+        },
+        {
+          "id": 27,
+          "name": "Probando 00",
+          "components": null
+        },
+        {
+          "id": 28,
+          "name": "testeandoenstaging",
+          "components": null
+        },
+        {
+          "id": 29,
+          "name": "testeandoenstaging2",
+          "components": null
+        },
+        {
+          "id": 30,
+          "name": "probandodesdeStaging",
+          "components": [
+            {
+              "name": "esto es una prueba",
+              "components": "esto es una prueba de los componentes{descripcion:que adentro tiene un json}"
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "prueba 003 ",
+          "components": [
+            {
+              "permissionsRoleComplete": [
+                {
+                  "label": "Configuracion",
+                  "name": "config",
+                  "action": [
+                    {
+                      "label": "Ver",
+                      "value": true,
+                      "name": "CONFIG-VER"
+                    }
+                  ],
+                  "component": [
+                    {
+                      "label": "Gestion de usuario",
+                      "name": "GesUser",
+                      "key ": "User",
+                      "value": true,
+                      "action": [
+                        {
+                          "label": "Ver",
+                          "name": "GesUserVer",
+                          "key": "User"
+                        },
+                        {
+                          "label": "Crear",
+                          "name": "GesUserCrear",
+                          "key": "User"
+                        },
+                        {
+                          "label": "Editar",
+                          "name": "GesUserEditar",
+                          "key": "User"
+                        },
+                        {
+                          "label": "Deshabilitar",
+                          "name": "GesUserDes",
+                          "key": "User"
+                        }
+                      ],
+                      "component": []
+                    },
+                    {
+                      "label": "Gestion de roles",
+                      "name": "GesRol",
+                      "key": "Rol",
+                      "value": true,
+                      "action": [
+                        {
+                          "label": "Ver",
+                          "name": "GesRolVer",
+                          "key": "Rol"
+                        },
+                        {
+                          "label": "Crear",
+                          "name": "GesRolCrear",
+                          "key": "Rol"
+                        },
+                        {
+                          "label": "Editar",
+                          "name": "GesRolEditar",
+                          "key": "Rol"
+                        },
+                        {
+                          "label": "Deshabilitar",
+                          "name": "GesRolDes",
+                          "key": "Rol"
+                        }
+                      ],
+                      "component": []
+                    },
+                    {
+                      "label": "Gestion de proyectos",
+                      "name": "GesProject",
+                      "key": "Project",
+                      "value": true,
+                      "action": [
+                        {
+                          "label": "Ver",
+                          "name": "GesProjectVer",
+                          "key": "Project"
+                        },
+                        {
+                          "label": "Crear",
+                          "name": "GesProjectCrear",
+                          "key": "Project"
+                        },
+                        {
+                          "label": "Editar",
+                          "name": "GesProjectEdit",
+                          "key": "Project"
+                        },
+                        {
+                          "label": "Deshabilitar",
+                          "name": "GesProjectDes",
+                          "key": "Project"
+                        }
+                      ],
+                      "component": []
+                    }
+                  ]
+                },
+                {
+                  "label": "Proyecto",
+                  "name": "PRO",
+                  "action": [
+                    {
+                      "label": "ver",
+                      "name": "PRO-VER"
+                    }
+                  ],
+                  "component": [
+                    {
+                      "label": "Medidores",
+                      "name": "Med",
+                      "value": true,
+                      "component": [
+                        {
+                          "label": "Reporte de fases",
+                          "name": "MedRdf",
+                          "value": true,
+                          "action": [
+                            {
+                              "label": "Ver",
+                              "value": true,
+                              "name": "MedRpfVer"
+                            },
+                            {
+                              "label": "Descargar",
+                              "value": true,
+                              "name": "MedRpfDes"
+                            }
+                          ],
+                          "component": []
+                        },
+                        {
+                          "label": "Reporte de medicion general",
+                          "name": "MedRmg",
+                          "action": [
+                            {
+                              "label": "Ver",
+                              "value": true,
+                              "name": "MedRmgVer"
+                            },
+                            {
+                              "label": "Descargar",
+                              "value": true,
+                              "name": "MedRmgDes"
+                            }
+                          ],
+                          "component": []
+                        },
+                        {
+                          "label": "Macromedidor",
+                          "name": "Mac",
+                          "action": [
+                            {
+                              "label": "Ver",
+                              "value": true,
+                              "name": "MedMacVer"
+                            }
+                          ],
+                          "component": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Area",
+                      "name": "Area",
+                      "value": true,
+                      "component": [
+                        {
+                          "label": "Ver",
+                          "name": "AREA-VER",
+                          "value": true,
+                          "component": [
+                            {
+                              "label": "Reporte ocupacion de area",
+                              "name": "AreaRoa",
+                              "value": true,
+                              "action": [
+                                {
+                                  "label": "Ver",
+                                  "value": true,
+                                  "name": "AreaRoaVer"
+                                },
+                                {
+                                  "label": "Descargar",
+                                  "value": true,
+                                  "name": "AreaRoaDes"
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Reporte temperatura de area",
+                              "name": "AreaRpta",
+                              "value": true,
+                              "action": [
+                                {
+                                  "label": "Ver",
+                                  "value": true,
+                                  "name": "AREA-RPTA-VER"
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Dispositivos",
+                              "name": "AreaDisp",
+                              "value": true,
+                              "action": [
+                                {
+                                  "label": "Ver",
+                                  "value": true,
+                                  "name": "AreaDispVer"
+                                },
+                                {
+                                  "label": "Manipular",
+                                  "value": true,
+                                  "name": "AreaDispMan"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Reporte de ocupacion general",
+                          "name": "AreaRpog",
+                          "value": true,
+                          "action": [
+                            {
+                              "label": "ver",
+                              "value": true,
+                              "name": "AreaRpogVer"
+                            },
+                            {
+                              "label": "Descargar",
+                              "value": true,
+                              "name": "AreaRpogDes"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Medidores",
+                          "name": "AreaMed",
+                          "value": true,
+                          "action": [
+                            {
+                              "label": "ver",
+                              "value": true,
+                              "name": "AreaMedVer"
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Reporte de fallos",
+                          "name": "AreaRpdf",
+                          "value": true,
+                          "action": [
+                            {
+                              "label": "ver",
+                              "value": true,
+                              "name": "AreaRpdfver"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Controladores",
+                      "name": "Ctl",
+                      "value": true,
+                      "component": [
+                        {
+                          "label": "Ver",
+                          "name": "CrlVer"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "name": "vista00",
+          "components": null
+        },
+        {
+          "id": 32,
+          "name": "probando 30-01-2023",
+          "components": [
+            {
+              "test1": "componente1 del 30-01-2023"
+            },
+            {
+              "test2": "componente2 del 30-01-2023"
+            },
+            {
+              "test3": "componente3 del 30-01-2023"
+            },
+            {
+              "test4": "componente4 del 30-01-2023"
+            },
+            {
+              "test5": "componente5 del 30-01-2023"
+            },
+            {
+              "test6": "componente6 del 30-01-2023"
+            },
+            {
+              "test7": "componente7 del 30-01-2023"
+            },
+            {
+              "test8": "componente8 del 30-01-2023"
+            },
+            {
+              "test9": "componente9 del 30-01-2023"
+            }
+          ]
+        }
+      ]
+    }
+  }

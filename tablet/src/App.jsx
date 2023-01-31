@@ -1,6 +1,14 @@
 import "./App.scss";
+import datos from "./helpers/datos.json";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [user, setUser] = useState({});
+ 
+  useEffect(() => {
+    setUser(datos.data);
+  }, [datos]);
+console.log(user)
   return (
     <div className="table_container_users_views">
       <div className="tablelistuser_container">
@@ -11,31 +19,36 @@ function App() {
           </div>
           <div className="__content_header_button">
             <button>
-              {/* <i className="fas fa-plus">::before</i> */}
-              Agregar usuario
+              Agregar Rol
             </button>
           </div>
         </div>
-        <div className="tablelistusuario_content_header_tablet">
-          <div className="__content_header_tablet"> ID </div>
-          <div className="__content_header_tablet"> Nombre </div>
-          <div className="__content_header_tablet"> Apellido </div>
-          <div className="__content_header_tablet"> Usuario </div>
-          <div className="__content_header_tablet"> Contacto </div>
-          <div className="__content_header_tablet"> n° Identificación </div>
-          <div className="__content_header_tablet"> Correo </div>
-          <div className="__content_header_tablet">
-            {" "}
-            Habilitar/Deshabilitar{" "}
-          </div>
-          <div className="__content_header_tablet"> Historial </div>
+        <table className="table">
+          <thead className="table_title">
+            <tr className="table_tr">
+              <th className="table_th">Id </th>
+              <th className="table_th">Nombre Rol</th>
+              <th className="table_th">Estado</th>
+              <th className="table_th">deshabilitar rol</th>
+              <th className="table_th">editar rol</th>
+            </tr>
+          </thead>
+          <tbody className="table_tbody">
+          {user.getAllRoles.map((i) => (
+                <tr>
+                <td>{i.id}</td>
+                <td>{i.name}</td>
+                <td>Activo</td>
+                <td>::icon</td>
+                <td>::icon</td>
+              </tr> 
+                ))}
+           
+          </tbody>
+        </table>
         </div>
-        <div className="tablelistusuario_content_header_user tablelistusuario_content_header_bg">
-          <div className="__div__">1</div>
-          <div className="__content_codes_name_users">Raul</div>
-          </div>
       </div>
-    </div>
+    
   );
 }
 
