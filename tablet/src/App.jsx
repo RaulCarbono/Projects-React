@@ -1,5 +1,6 @@
 import "./App.scss";
 import datos from "./helpers/datos.json";
+import Header from "./components/Header";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
   }, [datos]);
 console.log(user)
   return (
+    <>
+    <Header />
     <div className="table_container_users_views">
       <div className="tablelistuser_container">
         <div className="tablelistUser_content_header">
@@ -23,32 +26,33 @@ console.log(user)
             </button>
           </div>
         </div>
-        <table className="table">
-          <thead className="table_title">
-            <tr className="table_tr">
-              <th className="table_th">Id </th>
-              <th className="table_th">Nombre Rol</th>
-              <th className="table_th">Estado</th>
-              <th className="table_th">deshabilitar rol</th>
-              <th className="table_th">editar rol</th>
-            </tr>
-          </thead>
-          <tbody className="table_tbody">
-          {user.getAllRoles.map((i) => (
-                <tr>
-                <td>{i.id}</td>
-                <td>{i.name}</td>
-                <td>Activo</td>
-                <td>::icon</td>
-                <td>::icon</td>
-              </tr> 
+        <div className="table">
+          <div className="table_title">
+            <div className="table_t">
+              <div className="tablet_th">Avatar</div>
+              <div className="table_th">Id </div>
+               <div className="table_th">Nombre Rol</div>
+               <div className="table_th">Estado </div>
+               <div className="table_th">deshabilitar rol</div>
+               <div className="table_th">editar rol</div>
+          </div>
+          </div>
+        </div>
+        <div className="contentRoles">
+        {user.getAllRoles.map((i , key) => (
+                <>
+                <div className="__avatar__">::icon</div>
+                <div className="__div__">{i.id}</div>
+                <div className="__name_roles__">{i.name}</div>
+                <div className="__state_role__">Activo</div>
+                <div className="__div__">::icon</div>
+                <div className="__edit__">::icon</div>
+                </> 
                 ))}
-           
-          </tbody>
-        </table>
+        </div>
         </div>
       </div>
-    
+      </>
   );
 }
 
