@@ -94,30 +94,30 @@
   }
 }
 
-.contentRoles {
-  border-spacing: 0;
+%extende_contentRoles_header {
   display: grid;
-  grid-template-columns: 15% 16% 19% 20% 20% 10%;
-  padding: 0 10%;
-  margin: 10px auto 0;
-  border-spacing: 0;
-  border-radius: 20px;
-  
+  grid-template-columns: 15% 25% 19% 20% 20% 10%;
+  margin: 0 2%;
+}
+
+.contentRoles {
+  @extend %extende_contentRoles_header;
+  background-color: rgba($color: #e97b7b, $alpha: 0.2);
+  border-radius: 20px 10px 0 0;
+  height: 80px;
+}
+
+.contentRoles_body {
+  @extend %extende_contentRoles_header;
+  height: 80px;
+  border-radius: 5px;
 
   .__div__ {
-    display: grid;
     justify-self: flex-start;
     padding-left: 20px;
     align-self: center;
-    font-weight: 600;
-    color: #474747;
-    
-  }
-  .__name_roles__ {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    color: #474747;
-    padding: 10px;
+    font-weight: 500;
+    color: darkslategray;
   }
   .__state_role__ {
     justify-self: flex-start;
@@ -125,6 +125,12 @@
     align-self: center;
     font-weight: 600;
     color: #474747;
+  }
+  .__name_roles__ {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    color: #474747;
+    padding: 10px;
   }
   .__edit__ {
     justify-self: flex-start;
@@ -138,12 +144,48 @@
   .__avatar__{
     display: grid;
     justify-self: flex-start;
+    padding-left: 30px;
+    align-self: center;
+    font-weight: 600;
+    color: #474747;
+  }
+}
+
+// .contentRoles {
+//   border-spacing: 0;
+//   display: grid;
+//   grid-template-columns: 15% 16% 19% 20% 20% 10%;
+//   padding: 0 10%;
+//   margin: 10px auto 0;
+//   border-spacing: 0;
+//   border-radius: 20px;
+
+//   }
+//   .__name_roles__ {
+//     display: grid;
+//     grid-template-rows: repeat(2, 1fr);
+//     color: #474747;
+//     padding: 10px;
+//   }
+
+// .__edit__ {
+//   justify-self: flex-start;
+//   font-size: 14px;
+//   align-self: center;
+//   font-weight: 700;
+//   margin-left: 20px;
+//   padding: 2px 3px 5px;
+//   border-radius: 5px;
+// }
+  .__avatar__{
+    display: grid;
+    justify-self: flex-start;
     padding-left: 20px;
     align-self: center;
     font-weight: 600;
     color: #474747;
   }
-  .prueba{
-    background-color: darkgray;
-  }
-}
+//   .prueba{
+//     background-color: darkgray;
+//   }
+// }
