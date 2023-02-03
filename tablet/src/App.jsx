@@ -1,6 +1,12 @@
 import "./App.scss";
 import datos from "./helpers/datos.json";
 import Header from "./components/Header";
+import EditIcon from "@mui/icons-material/Edit";
+import NotInterestedIcon from "@mui/icons-material/NotInterested";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SearchIcon from "@mui/icons-material/Search";
+import Avatar from "@mui/material/Avatar";
+
 import { useEffect, useState } from "react";
 
 function App() {
@@ -17,43 +23,53 @@ function App() {
         <div className="tablelistuser_container">
           <div className="tablelistUser_content_header">
             <div className="__content_header_title">
-              <h1> Lista de usuarios </h1>
-              <span>Aquí puedes gestionar los usuarios</span>
+              <h1> Lista de Roles </h1>
+              <span>Aquí puedes gestionar los roles de los usuarios</span>
             </div>
             <div className="__content_header_button">
               <button>Agregar Rol</button>
             </div>
           </div>
+          <div className="_rol_busqueda__">
+            <input
+              className="_rol_busqueda_input"
+              type="text"
+              placeholder="Busquedad"
+            ></input>
+
+            <SearchIcon className="_rol_busqueda_button" />
+          </div>
           <div className="table">
             <div className="table_title">
               <div className="table_t">
-                <div className="tablet_th">Avatar</div>
-                <div className="table_th">Id </div>
-                <div className="table_th">Nombre Rol</div>
-                <div className="table_th">Estado </div>
-                <div className="table_th">deshabilitar rol</div>
-                <div className="table_th">editar rol</div>
+                <div>Nombre Rol</div>
+                <div>Estado </div>
+                <div>Acciones</div>
               </div>
             </div>
           </div>
-          <div className="contentRoles">
-              {user.getAllRoles.map((i, key) => (
-                <div
-                  className={`_tables_content_header ${
-                    key % 2 !== 0 ? "" : "_tables_content_header_bg"
-                  }`}
-                >
-                
-                  <div className="__avatar__">::icon</div>
-                  <div className="__div__">{i.id}</div>
+          <>
+            {user.getAllRoles.map((i, key) => (
+              <div
+                className={`_tables_content_header ${
+                  key % 2 !== 0 ? "" : "_tables_content_header_bg"
+                }`}
+              >
+                <div className="container_avatar_roles">
+                  <Avatar>H</Avatar>{" "}
                   <div className="__name_roles__">{i.name}</div>
-                  <div className="__state_role__">Activo</div>
-                  <div className="__div__">::icon</div>
-                  <div className="__edit__">::icon</div>
-                
                 </div>
-              ))}
-          </div>
+
+                <div className="__state_role__">Activo</div>
+                <div className="__divi__">
+                  <>
+                    {" "}
+                    <EditIcon /> <NotInterestedIcon />{" "}
+                  </>
+                </div>
+              </div>
+            ))}
+          </>
         </div>
       </div>
     </>
