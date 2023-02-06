@@ -19,9 +19,9 @@ function App() {
   return (
     <>
       <Header />
-      <div className="table_container_users_views">
-        <div className="tablelistuser_container">
-          <div className="tablelistUser_content_header">
+      <div className="table_container_roles_views">
+        <div className="tablelisrol_container">
+          <div className="tablelistrole_content_header">
             <div className="__content_header_title">
               <h1> Lista de Roles </h1>
               <span>Aquí puedes gestionar los roles de los usuarios</span>
@@ -30,7 +30,7 @@ function App() {
               <button>Agregar Rol</button>
             </div>
           </div>
-          <div className="_rol_busqueda__">
+          {/* <div className="_rol_busqueda__">
             <input
               className="_rol_busqueda_input"
               type="text"
@@ -38,21 +38,19 @@ function App() {
             ></input>
 
             <SearchIcon className="_rol_busqueda_button" />
-          </div>
-          <div className="table">
+          </div> */}
+          <div className="tablelistrole_content_header_table">
             <div className="table_title">
-              <div className="table_t">
                 <div>Nombre Rol</div>
                 <div>Estado </div>
                 <div>Acciones</div>
-              </div>
             </div>
           </div>
           <>
             {user.getAllRoles.map((i, key) => (
               <div
-                className={`_tables_content_header ${
-                  key % 2 !== 0 ? "" : "_tables_content_header_bg"
+                className={`tablescontent_header_list ${
+                  key % 2 !== 0 ? "" : "_tablescontent_header_list_bg"
                 }`}
               >
                 <div className="container_avatar_roles">
@@ -60,11 +58,11 @@ function App() {
                   <div className="__name_roles__">{i.name}</div>
                 </div>
 
-                <div className="__state_role__">Activo</div>
+                <div className="__state_role__"><strong>Activo</strong></div>
                 <div className="__divi__">
                   <>
                     {" "}
-                    <EditIcon /> <NotInterestedIcon />{" "}
+                    <EditIcon className="_edit_"/> <NotInterestedIcon className="_desha_"/>{" "}
                   </>
                 </div>
               </div>

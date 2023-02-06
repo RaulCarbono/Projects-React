@@ -1,31 +1,34 @@
-.table_container_users_views {
-  display: grid;
-}
-.tablelistuser_container {
-  .tablelistUser_content_header {
-    display: grid;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    grid-template-columns: repeat(2, 1fr);
+.table_container_roles_views {
+  width: 100%;
+  height: 100vh;
 
+  .tablelisrol_container {
+    margin-bottom: 40px;
+
+    .tablelistrole_content_header {
+      display: grid;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      grid-template-columns: repeat(2, 1fr);
+    }
     .__content_header_title {
       justify-self: flex-start;
       align-self: center;
       padding-left: 32px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+      font-family: 'Public Sans';
 
       h1 {
         font-weight: 900;
         font-size: 24px;
         margin: 0 0 10px 0;
         color: black;
+        font-family: 'Public Sans';
       }
       span {
         font-weight: 600;
         font-size: 16px;
-        color: lightgreen;
+        color: grey;
+         font-family: 'Public Sans';
       }
     }
     .__content_header_button {
@@ -34,141 +37,101 @@
       padding-right: 32px;
 
       button {
-        background-color: lightgreen;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-          "Helvetica Neue", sans-serif;
-        color: green;
-        padding: 15px 35px;
+        background-color: #0b7ae2;
+        color: white;
+        box-shadow: 4px 2px 4px 2px rgba($color: #9d9d9d, $alpha: 0.8);
+        padding: 5px 15px;
+        font-weight: 400;
         border-radius: 5px;
         font-size: 14px;
         border: none;
+        width: 130px;
         cursor: pointer;
+        font-family: 'Public Sans';
 
         i {
           padding-right: 5px;
         }
-        &:hover {
-          background-color: rgba($color: green, $alpha: 0.5);
-        }
       }
     }
   }
-  .__content_header_tablet {
+
+  %extende_tablelistroles_content_header {
     display: grid;
-    padding: 8px;
-    border: 1px solid #0a0909;
-    text-align: left;
-    border-radius: 5px;
-    background-color: lightgreen;
-    grid-template-rows: 2;
-  }
-  .__div__ {
-    display: grid;
+    grid-template-columns: 70% 15% 0%;
+    margin: 0 20%;
     align-items: center;
-    align-self: center;
-    justify-self: center;
-    grid-template-rows: auto;
   }
-}
+  .tablelistrole_content_header_table {
+    @extend %extende_tablelistroles_content_header;
+    align-items: center;
+    text-align: start;
+    background-color: rgba($color: #0b7ae2, $alpha: 0.4);
+    box-shadow: 1px 1px 1px 1px rgba($color: #9d9d9d, $alpha: 0.8);
+    border-radius: 10px 10px 0px 0px;
+    height: 90px;
+    width: 60%;
+    font-family: 'Public Sans';
 
-.tablelistusuario_content_header_tablet {
-  display: grid;
-  grid-auto-flow: column;
-}
-.table {
-  padding: 0 16%;
-  margin: 30px 0 0;
-  border-spacing: 0;
-  border-radius: 20px;
-
-  .table_title {
-    border-radius: 5px;
-    background-color: rgba(31, 137, 229, 0.2);
-    padding: 28px;
-    font-weight: 700;
-
-    .table_t {
+    .table_title {
+      padding-top: 30px;
+      font-weight: 900;
+      color:  #0b7ae2;
       display: grid;
-      grid-template-columns: 30% 24% 20% ;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 16px;
-      font-weight: 800;
-      border-radius: 5px;
-    }
-  }
-}
-
-%extende_contentRoles_header {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  display: grid;
-  grid-template-columns: 20% 40% 10% ;
-  padding: 0 16%;
-  border-spacing: 0;
- justify-content: space-between;
- align-items: center
-}
-
-._tables_content_header {
-  @extend %extende_contentRoles_header;
-  background-color: rgba(226, 227, 229, 0.4);
-  border-radius: 5px;
-  height: 60px;
-  justify-self: center;
-
-  .container_avatar_roles{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    margin: 10px -12px 10px 20px;
-
-    .__name_roles__{
-      justify-self: center;
+      margin-left: 100px;
       align-self: center;
-      margin: -80px -60px 10px 80px;
-      color: rgb(92, 88, 96);
-        font-weight: 600;
+      grid-template-columns: 65% 65% 0%;
+      
     }
   }
-  .__state_role__ {
-    margin: 0px 260px 45px 0px;
-    color: rgb(38, 181, 93);
-    font-weight: 700;
-    justify-self: center;
-    align-self: center;
+
+  .tablescontent_header_list {
+    @extend %extende_tablelistroles_content_header;
+    height: 60px;
+    width: 60%;
+    border: solid 0.0.4px rgb(180, 178, 178);
+    box-shadow: 1px 1px 1px 1px rgba($color: #9d9d9d, $alpha: 0.2);
+    border-radius: 0px 0px 10px 10px;
+    display: grid;
+    grid-template-columns: 49% 40% 12%;
+
+    .container_avatar_roles {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: 'Public Sans';
+      gap: 40px;
+      justify-self: flex-start;
+      padding-left: 35px;
+      align-self: center;
+      font-weight: 600;
+      color: #000000;
+    }
   }
-  .__divi__ {
-    margin: 20px 10px 60px -150px;
+  ._tablescontent_header_list_bg {
+    background-color: rgba($color: #c9c9c9, $alpha: 0.2);
+    border-radius: 0px 0px 10px 10px;
+    font-family: 'Public Sans';
   }
+  ._edit_{
+    color: rgba(5, 158, 5, 0.542);
+    font-weight: 600;
+    font-family: 'Public Sans';
+  }
+  ._desha_{
+    color: rgba(226, 18, 18, 0.532);
+    font-family: 'Public Sans';
+  }
+.__state_role__{
+  display: grid;
+  font-weight: bold;
+  color: #199600;
+  border-radius: 15px;
+  border: solid 0.5px rgba(32, 32, 32, 0.2);
+  width: 60px;
+  text-align: center;
+  align-self: center;
+  background-color: rgba(13, 243, 51, 0.5);
+  font-family: 'Public Sans';
 }
-
-._tables_content_header_bg {
-  @extend %extende_contentRoles_header;
-  background-color: rgba($color: #ffffff, $alpha: 0.5);
-  height: 60px;
-  border-radius: 5px;
-  justify-self: center;
-}
-
-._rol_busqueda__ {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 300px;
-  width: 250px;
-  color: #666565; 
-  ._rol_busqueda_input {
-    border-radius: 5px;
-    height: 30px;
-    align-self: center;
-    border-color: rgba($color: #666565, $alpha: 0.2);
-  }
-
-  ._rol_busqueda_button{
-    margin: 5px -26px 0;
-    align-items: center;
-    justify-content: center;
-    color: rgba($color: #1f1d1d, $alpha: 0.4); 
-  }
 }
