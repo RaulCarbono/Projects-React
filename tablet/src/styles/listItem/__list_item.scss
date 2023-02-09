@@ -1,0 +1,31 @@
+.navbar_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 70px;
+    background-color: #3f9948;
+    .navbar_title{
+        justify-self: start;
+        padding-left: 30px;
+        align-self: center;
+        font-size: 18px;
+        font-weight: 500;
+        color:#ffffff;
+        
+        .navbar_menu{
+            display: none;
+            font-size: 25px;
+            padding-right: 30px;
+            cursor: pointer;
+        }
+    }
+    .navbar_btn_logout{
+        justify-self: flex-end;
+        align-self: center;
+        margin-right: 20px;
+        color: #ffffff;
+        font-size: 25px;
+        padding: 5px 12px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
