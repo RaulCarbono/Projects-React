@@ -10,6 +10,13 @@ const DataTable = () => {
   }, [datos]);
   console.log(user);
 
+  const randomColor = () => {
+    let style = ['avatar_color1', 'avatar_color2', 'avatar_color3', 'avatar_color4']
+    let random = Math.floor(Math.random()*style.length)
+    let value = style[random]
+    return (value)
+  }
+
   return (
     <>
       <div className="datatable_container">
@@ -33,7 +40,7 @@ const DataTable = () => {
               <>
                 <div className="container_table_body">
                   <div className="container_avatar_rol">
-                  <Avatar>{i.name.charAt(0).toUpperCase()}</Avatar> 
+                  <Avatar className={randomColor()}>{i.name.charAt(0).toUpperCase()}</Avatar> 
                   <div className="name_rol">{i.name}</div>
                   </div>
                   <div className="container_estado">{"activo"}</div>

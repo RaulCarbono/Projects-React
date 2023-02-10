@@ -1,5 +1,6 @@
 .datatable_container {
   display: grid;
+  
 
   .container_header {
     display: grid;
@@ -58,10 +59,10 @@
 
   .container_title_table {
     @extend %extend_content_table;
-    background: linear-gradient(270deg, #3ca2e2 0%, #21cd43 46%, #3fae75 100%);
+    background: #fff;
     margin-top: -1em;
     padding: 8px;
-    color: #fff;
+    color: #000;
     display: grid;
     justify-content: center;
     justify-self: center;
@@ -72,6 +73,14 @@
     .container_estado {
       margin-top: 10px;
       margin-left: 10px;
+      border: 1px solid #5cb85c;
+      width: 4em;
+      text-align: center;
+      height: 1.6em;
+      border-radius: 5px;
+      font-weight: 500;
+      color: #ffffff;
+      background-color: #5cb85c;
     }
 
     h3 {
@@ -83,12 +92,17 @@
       margin-top: 10px;
       margin-right: 20px;
     }
+    .name_rol{
+        font-weight: 600;
+        
+    }
+    
     .edit {
-      color: rgb(32, 91, 210);
+      color: #337ab7;
     }
 
     .disable {
-      color: rgb(199, 21, 21);
+      color: #fe635f;
     }
 
     .container_table_body {
@@ -113,6 +127,18 @@
         .name_rol{
             margin-top: 8px;
         }
+    }
+    .avatar_color1{
+        background: $color_onoff_0;
+    }
+    .avatar_color2{
+        background: $color_onoff_100;
+    }
+    .avatar_color3{
+        background: $color_onoff_50;
+    }
+    .avatar_color4{
+      background: $color_onoff_75;  
     }
   }
 }
