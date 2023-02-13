@@ -1,9 +1,9 @@
-import { Dialog } from "./styles/customized/Dialog";
+import {Header} from './styles/components/Button'
 
 function App() {
   return <div className="principal">
-    hola
-    <Dialog  />
+   
+   <Header > hola </Header>
   </div>;
 }
 
