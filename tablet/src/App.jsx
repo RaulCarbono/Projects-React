@@ -1,10 +1,12 @@
+import { ButtonCrear } from "./components/ButtonCrear";
+
 import Sidebar from "./components/Sidebar";
 
 function App() {
 
   return (
     <>
-      <Sidebar />
+      <ButtonCrear />
       
     </>
   );

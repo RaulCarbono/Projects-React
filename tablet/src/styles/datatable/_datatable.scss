@@ -15,6 +15,7 @@
       color: black;
       margin-left: 10px;
     }
+    
     span {
       font-weight: 600;
       font-size: 16;
@@ -26,12 +27,7 @@
       padding-right: 32px;
 
       .button_agreger {
-        background: linear-gradient(
-          270deg,
-          #3ca2e2 0%,
-          #21cd43 46%,
-          #3fae75 100%
-        );
+        background:#5cb85c ;
         color: #fff;
         box-shadow: 4px 2px 4px 2px rgb(146, 158, 158, 40%);
         padding: 5px 15px;
@@ -44,7 +40,7 @@
   }
   .container_title_table {
     display: grid;
-    margin: 0 2%;
+    margin: 0 5%;
     width: 92%;
     height: 70vh;
     border-radius: 2px;
@@ -61,40 +57,50 @@
     @extend %extend_content_table;
     background: #fff;
     margin-top: -1em;
+    margin-left: 2em;
     padding: 8px;
     color: #000;
     display: grid;
-    justify-content: center;
-    justify-self: center;
+    
     align-self: center;
     width: 70em;
     height: 2em;
+    .name_rol_title{
+      margin-left: 10em;
+    }
+    .state_rol{
+      margin-left: 9.5em;
+
+    }
 
     .container_estado {
-      margin-top: 10px;
-      margin-left: 10px;
+      margin-top: 1em;
+      margin-left: 5em;
+      margin-bottom: 1em;
       border: 1px solid #5cb85c;
-      width: 4em;
-      text-align: center;
-      height: 1.6em;
+      width: 2.5em;
+      justify-content: center;
+      height: 1.0em;
       border-radius: 5px;
-      font-weight: 500;
       color: #ffffff;
       background-color: #5cb85c;
-    }
 
-    h3 {
-      padding: 10px;
+      p{
+        font-size: 12px;
+        margin: 0px auto;
+        font-weight: 300;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+      }
     }
-
     i {
       margin-left: 10px;
       margin-top: 10px;
       margin-right: 20px;
     }
     .name_rol{
-        font-weight: 600;
-        
+        font-weight: 600; 
     }
     
     .edit {
@@ -114,9 +120,11 @@
       height: 2.5em;
       padding-bottom: 10px;
       width: 70em;
-      margin-left: -2.5em;
-      grid-template-columns: 48% 26% 17% 10%;
-      box-shadow: 4px 2px 4px 2px rgb(146, 158, 158, 40%);
+      margin-top: 2em;
+      margin-bottom: -1.5em;
+      margin-left: -0.7em;
+      grid-template-columns: 55% 26% 10% 10%;
+      box-shadow: 2px 1px 2px 1px rgb(146, 158, 158, 40%);
       justify-self: center;
     }
     .container_avatar_rol{
@@ -124,9 +132,12 @@
         grid-template-columns: repeat(2, 1fr);
         margin-top: 5px;
         margin-left: 10px;
+        text-align: center;
         .name_rol{
-            margin-top: 8px;
+            margin-top: 10px;
+            margin-left: -10em;
         }
+       
     }
     .avatar_color1{
         color: $color_onoff_0;
@@ -145,7 +156,7 @@
     }
     .avatar_color4{
       color: $color_onoff_75;  
-      background-color: rgb(186, 183, 183);
+      background-color: rgb(247, 247, 247);
         border: solid 1px $color_onoff_75
     }
   }

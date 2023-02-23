@@ -30,10 +30,10 @@ const DataTable = () => {
           </div>
         </div>
         <div className="container_title_table">
-          <h3>Rol</h3>
-          <h3>Estado</h3>
-          <h3>Editar</h3>
-          <h3>Deshabilitar</h3>
+          <h3 className="name_rol_title">Rol</h3>
+          <h3 className="state_rol">Estado</h3>
+          <h3></h3>
+          <h3></h3>
 
           <div>
             {user.map((i, key) => (
@@ -43,7 +43,7 @@ const DataTable = () => {
                   <Avatar className={randomColor()}>{i.name.charAt(0).toUpperCase()}</Avatar> 
                   <div className="name_rol">{i.name}</div>
                   </div>
-                  <div className="container_estado">{"activo"}</div>
+                  <div className="container_estado"><p>activo</p></div>
                   <div className="edit">
                     <span className="fa-stack">
                       <i class="fa fa-square fa-stack-2x"></i>{" "}
