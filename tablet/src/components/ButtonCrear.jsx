@@ -1,26 +1,39 @@
 import { Button } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { ModalComponent } from "./ModalComponent";
+import { ButtonEditar } from "./ButtonEditar";
+import { AuthContext } from "../context/AuthProvider";
 
 export const ButtonCrear = () => {
+  const { openCreateRole, setOpenCreateRole } = useContext(AuthContext);
+ 
 
-  const [openCreateRole, setOpenCreateRole] = useState(false)
-
-  const handleCreateRole = () => {
+  const handleOpen = () => {
     setOpenCreateRole(true)
   }
 
-  const handleCloseRole = () => {
+  const handleClose = () => {
     setOpenCreateRole(!true)
   }
+  
+  let data = {
+    name: "Raul",
+    apellido: "Carbono",
+    edad: 24,
+    correo: "carbonoraul2@gmail.com",
+  };
 
   return (
     <div>
-      <Button color="success" variant="contained" sx={{textTransform:"capitalize"}} onClick={handleCreateRole}> Crear rol</Button> {" "}
-      <Button onClick={handleCloseRole}>close</Button>
-      {openCreateRole? <ModalComponent openCreateRole={openCreateRole}/> : "" }
-    
+      <Button
+        color="success"
+        variant="contained"
+        sx={{ textTransform: "capitalize" }}
+        onClick={handleOpen}
+      > Crear Role</Button>
+      <ButtonEditar  />
 
+      <ModalComponent  />
     </div>
   );
 };
