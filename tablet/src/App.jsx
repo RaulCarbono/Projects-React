@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <AuthProvider>
-      <ButtonCrear />
+      <Sidebar />
     </AuthProvider>
     </>
   );
