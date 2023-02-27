@@ -7,12 +7,11 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 20px;
     margin-bottom: 40px;
-    // font-weight: 500;
     font-size: 12px;
     color: #1d1d1da0;
 
     h1 {
-      color: black;
+      color: rgb(7, 7, 7);
       margin-left: 10px;
     }
     
@@ -89,7 +88,7 @@
       p{
         font-size: 12px;
         margin: 0px auto;
-        font-weight: bold;
+        
         display: flex;
         justify-self: center;
         justify-content: center;
@@ -143,23 +142,23 @@
        
     }
     .avatar_color1{
-        color: $color_onoff_0;
-        border: solid 1px $color_onoff_0 ;
-        background-color: rgb(234, 234, 234);
+        color: rgb(224, 8, 8);
+        border: solid 1px rgb(224, 8, 8) ;
+        background-color: rgb(255, 255, 255);
     }
     .avatar_color2{
-        color: $color_onoff_100;
-        background-color: rgb(245, 245, 245);
-        border: solid 1px $color_onoff_100;
+        color: rgb(5, 188, 5);
+        background-color: rgb(255, 255, 255);
+        border: solid 1px rgb(5, 188, 5);
     }
     .avatar_color3{
-        color: $color_onoff_50;
+        color: rgb(233, 117, 16);
         background-color: rgb(255, 255, 255);
-        border: solid 1px $color_onoff_50;
+        border: solid 1px rgb(233, 117, 16);
     }
     .avatar_color4{
       color: $color_onoff_75;  
-      background-color: rgb(247, 247, 247);
+      background-color: rgb(255, 255, 255);
         border: solid 1px $color_onoff_75
     }
   }
