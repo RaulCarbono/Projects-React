@@ -5,11 +5,12 @@ import { ButtonEditar } from "./ButtonEditar";
 import { AuthContext } from "../context/AuthProvider";
 
 export const ButtonCrear = () => {
-  const { openCreateRole, setOpenCreateRole } = useContext(AuthContext);
+  const { openCreateRole, setOpenCreateRole,setType } = useContext(AuthContext);
  
 
   const handleOpen = () => {
     setOpenCreateRole(true)
+    setType('crear')
   }
 
   const handleClose = () => {

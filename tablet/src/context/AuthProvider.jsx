@@ -7,12 +7,15 @@ export const AuthProvider = ({children}) => {
     // estados de prueba button
 
 const [openCreateRole, setOpenCreateRole] = useState(false);
+const [type, setType] = useState()
 
     return( 
         <AuthContext.Provider 
             value={{
                 openCreateRole, 
-                setOpenCreateRole
+                setOpenCreateRole,
+                type,
+                setType
             }}
         >
             {children}
