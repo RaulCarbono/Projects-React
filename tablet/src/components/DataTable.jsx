@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import datos from "../helpers/datos.json";
 import Avatar from '@mui/material/Avatar';
+import ModeEditIcon from '@mui/icons-material/ModeEdit';
+import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
 
 const DataTable = () => {
   const [user, setUser] = useState({});
@@ -36,29 +38,25 @@ const DataTable = () => {
           <h3></h3>
 
           <div>
-            {user.map((i, key) => (
-              <>
-                <div className="container_table_body">
-                  <div className="container_avatar_rol">
-                  <Avatar className={randomColor()}>{i.name.charAt(0).toUpperCase()}</Avatar> 
-                  <div className="name_rol">{i.name}</div>
+              {user.map((i, key) => (
+                <>
+                  <div className="container_table_body">
+                    <div className="container_avatar_rol">
+                    <Avatar className={randomColor()}>{i.name.charAt(0).toUpperCase()}</Avatar> 
+                    <div className="name_rol">{i.name}</div>
+                    </div>
+                    <div className="container_estado"><p>activo</p></div>
+                    <div className="edit_container">
+                      
+                      <ModeEditIcon className="edit_icon" />
+                      
+                    </div>
+                    <div className="disable_container">
+                      <AutoDeleteIcon className="disable_icon" />
+                    </div>
                   </div>
-                  <div className="container_estado"><p>activo</p></div>
-                  <div className="edit">
-                    <span className="fa-stack">
-                      <i class="fa fa-square fa-stack-2x"></i>{" "}
-                      <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </div>
-                  <div className="disable">
-                    <span className="fa-stack">
-                    <i class="fa fa-square fa-stack-2x"></i>
-                      <i class="fa fa-ban fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </div>
-                </div>
-              </>
-            ))}
+                </>
+              ))}
           </div>
         </div>
       </div>

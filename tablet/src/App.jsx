@@ -8,8 +8,8 @@ function App() {
   return (
     <>
     <AuthProvider>
-      {/* <Sidebar /> */}
-     <ButtonCrear />
+      <Sidebar />
+     {/* <ButtonCrear /> */}
     </AuthProvider>
     </>
   );

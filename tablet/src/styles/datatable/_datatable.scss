@@ -95,28 +95,59 @@
       }
     }
     i {
+      
       margin-left: 10px;
       margin-top: 10px;
       margin-right: 20px;
     }
+    
     .name_rol{
         font-weight: 600; 
     }
     
-    .edit {
-      color: #337ab7;
+    .edit_container {
+      margin-top: 15px;
+      width: 1.5em;
+      height: 1.5em;
+      background: #075eaa;
+      color: white;
+      border-radius: 5px;
+      .edit_icon{
+        margin-top: 3px;
+        width: 1em;
+        height: 0.8em;
+        display: flex;
+        align-items: stretch;
+        justify-items: center;
+        
+      }
     }
 
-    .disable {
-      color: #fe635f;
+    .disable_container {
+      margin-top: 15px;
+      width: 1.5em;
+      height: 1.5em;
+      background: #fa4c46;
+      color: white;
+      border-radius: 5px;
+      .disable_icon{
+        margin-top: 3px;
+        margin-left: 2px;
+        width: 1em;
+        height: 0.7em;
+        display: flex;
+        align-items: stretch;
+        justify-items: center;
+        
+      }
     }
 
     .container_table_body {
       @extend %extend_content_table;
       display: grid;
       border: 2px;
-      background: #f9f9f9;
-      color: #337ab7;
+      background: rgba(71, 67, 67, 0.1);
+      color: black;
       height: 2.5em;
       padding-bottom: 10px;
       width: 70em;
@@ -143,23 +174,23 @@
     }
     .avatar_color1{
         color: rgb(224, 8, 8);
-        border: solid 1px rgb(224, 8, 8) ;
+        border: solid 2px rgb(224, 8, 8) ;
         background-color: rgb(255, 255, 255);
     }
     .avatar_color2{
-        color: rgb(5, 188, 5);
-        background-color: rgb(255, 255, 255);
-        border: solid 1px rgb(5, 188, 5);
+        color: rgb(6, 218, 6);
+        background-color: rgb(252, 252, 252);
+        border: solid 2px rgb(6, 218, 6);
     }
     .avatar_color3{
         color: rgb(233, 117, 16);
-        background-color: rgb(255, 255, 255);
-        border: solid 1px rgb(233, 117, 16);
+        background-color: rgb(252, 252, 252);
+        border: solid 2px rgb(233, 117, 16);
     }
-    .avatar_color4{
-      color: $color_onoff_75;  
-      background-color: rgb(255, 255, 255);
-        border: solid 1px $color_onoff_75
+    .avatar_color4{ 
+      color:$color_onoff_75  ;  
+      background-color: rgb(255, 255, 255,);
+        border: solid 2px $color_onoff_75
     }
   }
 }
