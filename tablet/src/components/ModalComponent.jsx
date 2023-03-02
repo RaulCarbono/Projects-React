@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Dialog, AppBar } from "@mui/material";
+import { Dialog, AppBar, TextField } from "@mui/material";
 import { AuthContext } from "../context/AuthProvider";
 
 export const ModalComponent = ({data}) => {
@@ -16,6 +16,13 @@ export const ModalComponent = ({data}) => {
 
          {type}
         </AppBar>
+            <div className="container_form">
+            <TextField  size="small" placeholder="agrega tu nombre" />
+            <TextField  size="small" placeholder="agrega tu apellido" />
+            </div>
+              
+           
+
       </Dialog>
     </>
   );
