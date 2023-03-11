@@ -1,0 +1,63 @@
+body{
+  margin: 0;
+}
+
+
+.container{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 24rem auto 20rem;
+  gap: 16px;
+}
+
+.container_sidebar {
+  background-color: rgb(184, 184, 184);
+  height: 100vh;
+  width: 100%;
+  color: #070101;
+}
+
+.principal_container {
+  display: grid;
+  grid-template-columns: repeat(5,18em);
+  gap: 4em;
+  margin: 0px;
+}
+.card_container {
+  display: grid;
+  width: 20em;
+  height: 18em;
+  border-radius: 3em;
+  text-align: center;
+ background: linear-gradient(#de6161,#2657eb );
+ box-shadow: rgba(32, 29, 29, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.card_title {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 4em;
+  margin-left: 8px;
+  margin-top: 5px;
+  border-radius: 3em;
+  
+}
+.card_content{
+  display: grid;
+  margin-left: 1em;
+  margin-top: -15px;
+  border-radius: 5em;
+  width: 90%;
+  height: 99%;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+img{
+  width: 12em;
+  height: 10em;
+}
