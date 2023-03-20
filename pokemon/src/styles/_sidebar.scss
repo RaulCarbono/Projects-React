@@ -1,0 +1,27 @@
+.container_sidebar {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    background-color: #c0bebe;
+}
+
+.search {
+    display: grid;
+    border-radius: 15px;
+    width: 90%;
+   align-items: center;
+   justify-content: center;
+    border: none;
+    outline: none;
+}
+i{
+    display: flex;
+    position: relative;
+    margin-left: -12em;
+}
+
+.allpokemon{
+    height: 2em;
+    width: 100%;
+    font-size: 24px;
+}
