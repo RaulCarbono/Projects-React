@@ -1,14 +1,27 @@
 export const Nabvar = () => {
   return (
     <>
-      <header>
+      <header className="container_navbar">
         <nav>
           <div>
             {" "}
-            <img src="" alt="" />{" "}
+            <h2 className="logo">Movies</h2>
           </div>
           <ul>
-            <li></li>
+            <li>
+              <a href="">News</a>
+            </li>
+            <li>
+              <a href="">Series</a>
+            </li>
+            <li>
+              <a href="">Movies</a>
+            </li>
+            <li>
+              <a href="">Categories</a>
+            </li>
+
+            <input className="search" type="text" />
           </ul>
         </nav>
       </header>

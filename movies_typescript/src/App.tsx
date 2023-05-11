@@ -1,9 +1,10 @@
 import "../src/styles/App.scss";
+import { Nabvar } from "./components/Nabvar";
 
 function App() {
   return (
     <>
-      <h1>Hola mundo</h1>
+      <Nabvar />
     </>
   );
 }
