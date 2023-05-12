@@ -20,9 +20,8 @@ export const Nabvar = () => {
             <li>
               <a href="">Categories</a>
             </li>
-
-            <input className="search" type="text" />
           </ul>
+          <input className="search" type="text" />
         </nav>
       </header>
     </>

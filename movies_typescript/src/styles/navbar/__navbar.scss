@@ -1,35 +1,36 @@
 .container_navbar {
-  height: 100vh;
+  height: 15vh;
   width: 100%;
-  background-color: blanchedalmond;
-}
+  background-color: rgb(177, 172, 164);
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 40px;
-  padding-left: 10%;
-  padding-right: 10%;
-  ul {
-    list-style-type: none;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    ul {
+      list-style-type: none;
 
-    li {
-      display: inline-block;
-      padding: 10px 20px;
+      li {
+        display: inline-block;
+        padding: 10px 20px;
+      }
     }
   }
-}
 
-.logo {
-  color: black;
-  font-size: 32px;
-}
+  .logo {
+    color: black;
+    font-size: 32px;
+  }
 
-.search {
-  outline: none;
-  border: none;
-  border-radius: 25px;
-  width: 200px;
-  padding: 1%;
+  .search {
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    padding: 1%;
+    display: inline-block;
+  }
 }
