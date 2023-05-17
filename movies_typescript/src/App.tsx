@@ -1,13 +1,12 @@
 import "../src/styles/App.scss";
-import Cards from "./components/Cards";
+// import Cards from "./components/Cards";
 
-import { Nabvar } from "./components/Nabvar";
+import { Nabvar } from "./components/nabvar/Nabvar";
 
 function App() {
   return (
     <>
       <Nabvar />
-      <Cards />
     </>
   );
 }
