@@ -14,13 +14,12 @@ export const NavbarStyle = styled.nav<any>`
       font-weight: bold;
     }
   }
-  background: #001154;
   cursor: pointer;
   padding: 4px;
   border-bottom: 1px solid #09f;
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 7vh;
   width: 100%;
   justify-content: space-between;
   a {
