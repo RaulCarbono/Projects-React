@@ -1,18 +1,32 @@
+import { useEffect, useState } from "react";
 import "../src/styles/App.scss";
-import Banner from "./components/banner/Banner";
-// import Cards from "./components/Cards";
+import Cards from "./components/Cards/Cards";
 import { Nabvar } from "./components/nabvar/Nabvar";
+import { getAllMovies } from "./helpers/getAllMovies";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const shows = await getAllMovies();
+      setMovies(shows);
+    }
+    fetchData();
+  }, []);
+
   return (
     <>
-      <div className="wrapper">
-        <div className="container_nabvar">
+      <div className="grid-container">
+        <nav className="header">
           <Nabvar />
+        </nav>
+
+        <div className="main">
+          <Cards movies={movies} />
         </div>
-        <div className="container">
-          <Banner />
-        </div>
+        <section className="sidebar">Hola </section>
+        <div className="footer">hola</div>
       </div>
     </>
   );

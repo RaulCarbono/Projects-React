@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 export const NavbarStyle = styled.nav<any>`
   h2 {
-    color: #ffffff;
+    color: #000;
     font-weight: 400;
     margin-left: 1rem;
     span {
@@ -16,15 +16,25 @@ export const NavbarStyle = styled.nav<any>`
   }
   cursor: pointer;
   padding: 4px;
-  border-bottom: 1px solid #09f;
   display: flex;
   align-items: center;
+  border-bottom: solid 0.4px #0c91;
   height: 7vh;
-  width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
+  background: linear-gradient();
+
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     margin-right: 1rem;
+  }
+
+  input {
+    border: none;
+    width: 20rem;
+    height: 2rem;
+    outline: none;
+    border-radius: 10px;
+    writing-mode: horizontal-tb;
   }
 `;
