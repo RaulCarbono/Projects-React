@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import { Message } from './Message';
 
-export const NewBudget = ({ budget, setBudget }) => {
+export const NewBudget = ({ budget, setBudget, setIsValidPresupuesto }) => {
   const [message, setMessage] = useState('');
   const handleBudgetChange = (e) => {
     e.preventDefault();
 
-    if (!budget || budget) {
+    if (!budget || budget < 0) {
       setMessage('No es un presupuesto valido');
       return;
     }
     setMessage('');
+    setIsValidPresupuesto(true);
   };
 
   return (
