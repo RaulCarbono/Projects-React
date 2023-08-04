@@ -5,4 +5,5 @@ export const CardsStyled = styled.div<any>`
   height: 10vh;
   background-color: #fff;
   gap: 10px;
+  margin: 10px
 `;
