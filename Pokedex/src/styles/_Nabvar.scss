@@ -1,5 +1,7 @@
 .container_nabvar {
-  display: flex;
+  
+  flex-direction: row;
   background-color: azure;
   width: 20%;
+  height: 100vh;
 }
