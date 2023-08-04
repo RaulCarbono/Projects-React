@@ -1,25 +1,32 @@
 import { useState, useEffect } from "react"
-import { getPokemons } from "../helpers/petitionAxios"
-import { getPokemonsSpecific } from "../helpers/petitionAxios"
+import axios from "axios"
 
 
-export const CardPrincipal = () => {
-    const [pokemons, setPokemons] = useState()
-    getPokemonsSpecific()
+
+export const CardPrincipal = ({pokemons }) => {
+    const [image, setImage] = useState ()
+    const [ type, setType]  = useState ()
+    const [colorType, setColorType] = useState () 
+
     useEffect(() => {
-      const fecthPokemon = async() => {
-       const pokemonData = await getPokemons();
-        setPokemons(pokemonData) 
-      }
-      fecthPokemon()
+      handleSetter()
     }, [])
-    
 
+    
     console.log(pokemons)
+  
+    const handleSetter = async () => {
+        const pokedata = await axios.get(pokemons.url)
+        setColorType(pokedata.data.types[0].type.name)
+        setType(pokedata.data.types)
+        setImage(pokedata.data.sprites.other.dream_world.front_default)
+    }
+
   return (
     <div className='container-card'>
         <div className="container_cards">
             <div className="title-card">
+                {}
             </div>
                 <div>
                     <img src={""} alt="image-card" />
