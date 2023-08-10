@@ -1,13 +1,33 @@
+import { useState } from 'react';
+import { Message } from './Message';
 import CloseBtn from '../img/cerrar.svg';
 
-export const Modal = ({ setModal, animationModal, setAnimationModal }) => {
+export const Modal = ({ setModal, animationModal, setAnimationModal, saveExpenses }) => {
+  const [name, setName] = useState('');
+  const [current, setCurrent] = useState('');
+  const [category, setCategory] = useState('');
+  const [error, setError] = useState('');
+
   const hideModal = () => {
     setAnimationModal(false);
   };
 
-  setTimeout(() => {
-    setModal(false);
-  }, 6000);
+  // setTimeout(() => {
+  //   setModal(false);
+  // }, 6000);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if ([name, category, current].includes('')) {
+      setError('Todos los campos son obligatorios');
+      setTimeout(() => {
+        setError('');
+      }, 3000);
+      return;
+    }
+
+    saveExpenses({ name, current, category });
+  };
 
   return (
     <div className="modal">
@@ -18,8 +38,12 @@ export const Modal = ({ setModal, animationModal, setAnimationModal }) => {
           onClick={hideModal}
         />
       </div>
-      <form className={`formulario ${animationModal ? 'animar' : 'cerrar'}`}>
+      <form
+        onSubmit={handleSubmit}
+        className={`formulario ${animationModal ? 'animar' : 'cerrar'}`}
+      >
         <legend>Nuevo Gasto</legend>
+        {error && <Message tipo={error}>{error}</Message>}
         <div className="campo">
           <label htmlFor="nombre">Nombre Gasto</label>
 
@@ -27,6 +51,8 @@ export const Modal = ({ setModal, animationModal, setAnimationModal }) => {
             id="Nombre"
             type="text"
             placeholder="Añade el nombre del gasto"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="campo">
@@ -36,12 +62,18 @@ export const Modal = ({ setModal, animationModal, setAnimationModal }) => {
             id="cantidad"
             type="number"
             placeholder="Añade la cantidad del gasto"
+            value={current}
+            onChange={(e) => setCurrent(Number(e.target.value))}
           />
         </div>
         <div className="campo">
           <label htmlFor="categoria">Categoria</label>
 
-          <select id="categoria">
+          <select
+            id="categoria"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
             <option value=""> -- Seleccione --</option>
             <option value="ahorro"> Ahorro </option>
             <option value="comida"> Comidad </option>
