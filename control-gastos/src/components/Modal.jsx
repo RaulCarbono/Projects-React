@@ -10,15 +10,15 @@ export const Modal = ({ setModal, animationModal, setAnimationModal, saveExpense
 
   const hideModal = () => {
     setAnimationModal(false);
-  };
 
-  // setTimeout(() => {
-  //   setModal(false);
-  // }, 6000);
+    setTimeout(() => {
+      setModal(false);
+    }, 500);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if ([name, category, current].includes('')) {
+    if ([name, current, category].includes('')) {
       setError('Todos los campos son obligatorios');
       setTimeout(() => {
         setError('');
@@ -87,6 +87,7 @@ export const Modal = ({ setModal, animationModal, setAnimationModal, saveExpense
         <input
           type="submit"
           value="Añadir Gasto"
+          onClick={handleSubmit}
         />
       </form>
     </div>
