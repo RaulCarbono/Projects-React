@@ -8,17 +8,18 @@ import healthIcon from '../img/icono_salud.svg';
 import suscriptionsIcon from '../img/icono_suscripciones.svg';
 
 const iconsDictionary = {
-  save: saveIcon,
-  eats: eatsIcon,
-  house: houseIcon,
-  expenses: expensesIcon,
-  leisure: leisureIcon,
-  health: healthIcon,
-  suscriptions: suscriptionsIcon,
+  guardar: saveIcon,
+  comida: eatsIcon,
+  casa: houseIcon,
+  gastos: expensesIcon,
+  ocio: leisureIcon,
+  salud: healthIcon,
+  suscripciones: suscriptionsIcon,
 };
 
 export const Expense = ({ expense }) => {
   const { category, name, current, id, date } = expense;
+
   return (
     <div className="gasto sombra">
       <div className="contenido-gasto">

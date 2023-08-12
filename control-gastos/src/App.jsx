@@ -30,8 +30,9 @@ function App() {
   };
 
   return (
-    <>
+    <div className={modal && 'fijar'}>
       <Header
+        expenses={expenses}
         budget={budget}
         setBudget={setBudget}
         isValidPresupuesto={isValidPresupuesto}
@@ -60,7 +61,7 @@ function App() {
           setAnimationModal={setAnimationModal}
         />
       )}
-    </>
+    </div>
   );
 }
 

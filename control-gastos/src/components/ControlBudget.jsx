@@ -1,4 +1,4 @@
-export const ControlBudget = ({ budget }) => {
+export const ControlBudget = ({ budget, expenses }) => {
   const formaterCurrency = (cantidad) => {
     return cantidad.toLocaleString('en-US', {
       style: 'currency',
