@@ -1,26 +1,24 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export const ControlBudget = ({ budget, expenses }) => {
- 
+  const [available, setAvailable] = useState(0);
+  const [worn, setWorn] = useState(0);
 
-  const [disponible, setDisponible ] = useState(0)
-  const [gastado, setGastado] = useState(0)
+  useEffect(() => {
+    const totalSpent = expenses.reduce((total, i) => i.current + total, 0);
+    const totalAvailable = budget - worn;
 
-  console.log(expenses)
-//  useEffect(() => {
-//    const totalGastado = budget.reduce( (total, gasto) , => {
+    setAvailable(totalAvailable);
+    setWorn(totalSpent);
+  }, [expenses]);
 
-//    })
-//  }, [budget])
- 
   const formaterCurrency = (cantidad) => {
     return cantidad.toLocaleString('en-US', {
       style: 'currency',
       currency: 'USD',
     });
   };
-
 
   return (
     <div className="contenedor-presupuesto contenedor sombra dos-columnas">
@@ -32,10 +30,10 @@ export const ControlBudget = ({ budget, expenses }) => {
           <span>Presupuesto :</span> {formaterCurrency(budget)}
         </p>
         <p>
-          <span>Disponible :</span> {formaterCurrency(disponible)}
+          <span>Disponible :</span> {formaterCurrency(available)}
         </p>
         <p>
-          <span>Gastado :</span> {formaterCurrency(gastado)}
+          <span>Gastado :</span> {formaterCurrency(worn)}
         </p>
       </div>
     </div>
