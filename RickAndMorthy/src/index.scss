@@ -1,8 +1,15 @@
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
 body {
   margin: 0;
   padding: 0;
+ 
 }
 
-@import './styles/navbar';
-@import './styles/container_principal';
-@import './styles/card';
+
+@import "./styles/principal.scss";
+@import "./styles/header.scss";
+@import "./styles/card.scss";

@@ -1,0 +1,38 @@
+.container {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-content: center;
+    overflow-wrap: normal;
+    justify-content: center;
+}
+
+
+.card_container {
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    width: 330px;
+    height: 200px;
+   
+    border-radius: 15px;
+    box-shadow: 0 6px 6px rgba(70, 70, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+}
+.image { 
+    display: flex;
+    border-radius: 30px;
+    width: 60%;
+    height: 50%;
+    margin-bottom: 5px;
+}

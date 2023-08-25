@@ -1,18 +1,18 @@
 import { Card } from '../components/Card';
-import { Navbar } from '../components/Navbar';
+import { Navbar } from '../components/Header';
 
 export const Principal = () => {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
+      <div className='app'>
+    <Navbar/>
 
-      <main>
-        <Card />
-      </main>
+    <main>
+      <Card />
+    </main>
 
-      <footer>Adios..!</footer>
+   
+      </div>
     </>
   );
 };

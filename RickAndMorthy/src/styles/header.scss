@@ -1,0 +1,32 @@
+.header {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 56%, rgba(0,212,255,1) 100%);
+    padding: 10px;
+    text-align: center;
+    
+    
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 56%, rgba(0,212,255,1) 100%);  
+    color: white;
+    outline: none;
+    border-radius: 20px;
+    align-items: center;
+
+    .container_button {
+        outline: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        border:solid 2px #020079;
+    }
+  }
+
+ 
+  }
+  .logo_rick {
+    width: 260px;
+    height: 80px;
+  }
