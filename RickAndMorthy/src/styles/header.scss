@@ -1,24 +1,27 @@
 .header {
   padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 
   .navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 10px 20px;
-    background: #c2e4cb;
+    background-color: #27005d;
     width: auto;
-    // color: white;
+    color: white;
     outline: none;
     border-radius: 20px;
     align-items: center;
 
     .button {
-      color: #27b1bf;
+      color: #edecef;
     }
 
     .button:hover {
-      color: #176585;
+      background-color: #27005d;
+      color: #f2f1f3;
       border-radius: 20px;
       font-size: 24px;
       font-weight: bold;
@@ -26,8 +29,8 @@
     .container_button {
       outline: none;
       border-radius: 25px;
-      padding: 10px 20px;
-      border: solid 2px #c2e4cb;
+      padding: 10px 40px;
+      border: solid 1px #9400ff;
     }
   }
 }
@@ -36,23 +39,24 @@
   height: 80px;
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 700px) {
   .header {
+    max-width: 700px;
     padding: 10px;
-    // text-align: right;
-
     justify-content: center;
 
     .navbar {
       display: flex;
       justify-content: space-evenly;
       padding: 3px 10px;
-      background: #50e8d6;
-      width: 80%;
+      background: rgb(148, 0, 255);
+      background: linear-gradient(171deg, rgba(148, 0, 255, 1) 30%, rgb(62, 4, 142) 48%);
+      width: auto;
       color: rgb(239, 239, 239);
       outline: none;
       border-radius: 20px;
       align-items: center;
+      font-size: 14px;
 
       .button {
         color: #27b1bf;
@@ -61,15 +65,83 @@
       .button:hover {
         color: #62aecc;
         border-radius: 20px;
-        font-size: 24px;
+        font-size: 12px;
         font-weight: bold;
       }
       .container_button {
         outline: none;
         border-radius: 25px;
-        padding: 10px 20px;
+        padding: 10px 5px;
         border: solid 2px #c2e4cb;
       }
     }
+  }
+  .logo_rick {
+    width: 260px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    max-width: 400px;
+    padding: 2px;
+    align-items: center;
+    align-content: center;
+
+    justify-content: center;
+
+    .navbar {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2px 4px;
+      background: rgb(148, 0, 255);
+      background: linear-gradient(171deg, rgba(148, 0, 255, 1) 30%, rgb(62, 4, 142) 48%);
+      width: 85%;
+      outline: none;
+      border-radius: 20px;
+      align-items: center;
+      margin-bottom: 5px;
+      font-size: 10px;
+
+      .button {
+        color: #e4f1ff;
+      }
+
+      .button:hover {
+        color: #62aecc;
+        border-radius: 20px;
+
+        font-weight: bold;
+      }
+      .container_button {
+        outline: none;
+        border-radius: 25px;
+        padding: 5px 1.5px;
+        border: solid 1px #9400ff;
+      }
+    }
+  }
+  .logo_rick {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .header {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1536px) {
+  .header {
+    max-width: 1536px;
   }
 }
